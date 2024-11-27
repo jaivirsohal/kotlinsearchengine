@@ -51,6 +51,7 @@ class SearchEngineTest {
   fun `can index downloaded pages`() {
     val searchEngine = SearchEngine(downloadedPages)
     searchEngine.compileIndex()
+    print(searchEngine.index)
     val summary = searchEngine.searchFor("news")
 
     assertEquals("news", summary.query)
